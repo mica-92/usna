@@ -277,33 +277,28 @@
 
 /* About Section - Mobile Responsiveness Fixes */
 @media (max-width: 768px) {
-  .about {
-    padding: 2rem 1rem !important; /* Add horizontal padding */
-  }
 
   .about-container {
     display: flex; /* Use flex to control the layout */
     flex-direction: column; /* Stack children vertically */
     align-items: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
+
     gap: 1.5rem; /* Reduce gap on mobile */
   }
 
-  .about-text {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
 
   /* Fix for the welcome image */
   .about-header img {
+    margin-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     max-width: 100%;
     height: auto !important; /* Make responsive */
   }
 
   /* Fix for the tupractica.png image */
   .about-text img {
-    max-width: 80%; /* Make it responsive */
+    max-width: 100%; /* Make it responsive */
     height: auto !important; /* Remove fixed height */
     display: block;
     margin: 0 auto; /* Center it */
@@ -311,8 +306,6 @@
 
   /* Improve text readability */
   .about-text p {
-    font-size: 16px; /* Slightly smaller text on mobile */
-    line-height: 1.5;
     text-align: justify; /* Better text alignment */
     hyphens: auto; /* Enable hyphenation */
   }
@@ -330,7 +323,7 @@
   }
   
   .about-text img {
-    max-width: 70%;
+    max-width: 100%;
   }
 }
 
@@ -1418,7 +1411,7 @@
         
         @media (max-width: 1000px) {
             .studio {
-                padding: 3rem 0;
+                padding: 3rem 0.8rem;
             }
             
             .studio-container {
@@ -1770,15 +1763,7 @@ body.animations-ready {
 }
 
 
-/* Fix About section padding on mobile */
-@media (max-width: 768px) {
 
-  
-  .about-text {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-}
 
 /* Fix Schedule CTA spacing on mobile */
 @media (max-width: 768px) {
@@ -2163,7 +2148,7 @@ body.animations-ready {
     <section class="testimonial-section">
         <div class="container">
             <div class="section-title">
-                <h2>TESTIMONIOS DE NUESTRA COMUNIDAD</h2>
+                <h2>NUESTROS ALUMNOS</h2>
                 
             </div>
             
