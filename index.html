@@ -1,0 +1,2463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uṣṇa | estudio de yoga</title>
+        <link rel="shortcut icon" href="fav.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+    /* Megante font face */
+    @font-face {
+        font-family: 'Megante';
+        src: url('megante.regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    :root {
+        --primary: #7a9f79;
+        --secondary: #f8f3e6;
+        --accent: #d77a61;
+        --dark: #2c3e50;
+        --light: #ffffff;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Raleway', sans-serif;
+        color: var(--dark);
+        line-height: 1.6;
+        background-color: var(--light);
+    }
+    
+    h1 {
+        font-family: 'Megante', sans-serif;
+        font-weight: 100;
+        margin-bottom: 1rem;
+    }
+
+    h2, h4 {
+        font-family: 'Megante', sans-serif;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-family: 'Megante', sans-serif;
+        font-weight: 700;
+    }    
+    
+    p {
+        margin-bottom: 1.5rem;
+        font-size: 18px;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Header animation on scroll */
+    header {
+        transition: transform 0.4s ease-in-out;
+        transform: translateY(0);
+    }
+
+    .header-hidden {
+        transform: translateY(-100%);
+    }
+    
+    /* Header & Navigation */
+    header {
+        background-color: var(--light);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 0;
+    }
+    
+    .logo {
+        font-family: 'Lato', serif;
+        font-size: 40px;
+        font-weight: 700;
+        color: var(--primary);
+        text-decoration: none;
+    }
+    
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        align-items: center;
+    }
+    
+    .nav-menu li {
+        margin-left: 2rem;
+    }
+    
+    .nav-menu a {
+        text-decoration: none;
+        font-size: 25px;
+        font-family: 'Megante', sans-serif;
+        color: #2c512fff;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+    
+    .nav-menu a:hover li:hover{
+        color: var(--accent);
+        transition: transform 0.4s, color 0.3s;
+        transform: scale(1.1) !important;
+        font-weight: 700;
+    }
+    
+    .social-icons {
+        display: flex;
+        gap: 15px;
+        margin-left: 20px;
+    }
+
+    .social-icons a {
+        font-size: 25px;
+        transition: transform 0.3s, color 0.3s;
+    }
+
+
+    .social-icons .fa-instagram:hover {
+        color: var(--accent);
+    }
+
+    .social-icons .fa-whatsapp:hover {
+        color: var(--accent);
+    }
+    
+    .mobile-menu-btn {
+        display: none;
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        color: var(--dark);
+        cursor: pointer;
+    }
+    
+    /* Hero Section */
+    .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: var(--light);
+        padding-top: 80px;
+    }
+    
+    .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    
+    .hero-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+        color: var(--light);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        line-height: 1.2;
+    }
+    
+    .hero-logo {
+        height: 400px;
+        margin: 0 15px;
+        vertical-align: middle;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+/* Button container for centering */
+.btn-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Updated button styles */
+.btn {
+    display: inline-block;
+    background-color: var(--light);
+    color: var(--primary);
+    padding: 1rem 3rem; /* Increased padding for wider button */
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 5px;
+    border: var(--primary) 2px solid;
+    text-decoration: none;
+    font-weight: 900; /* Changed from 960 to valid value */
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 250px; /* Minimum width */
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: var(--primary);
+    color: var(--light);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .btn {
+        padding: 0.9rem 2rem;
+        font-size: 1.1rem;
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        min-width: 180px;
+    }
+}
+    
+/* About Section */
+.about {
+    padding: 2rem 0;
+    background-color: #f3f9d2;
+    margin-top: 2rem;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    min-height: 300px; /* Added for vertical centering */
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #8db596, transparent);
+    margin: 1.5rem 0;
+    width: 100%;
+}
+
+.leaf-decoration {
+    color: #8db596;
+    margin: 0 5px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 1000px) {
+    .about-container {
+        flex-direction: row;
+        align-items: stretch; /* Changed to stretch */
+        gap: 0rem;
+    }
+    
+    .about-header {
+        flex: 1;
+        flex-direction: column;
+        justify-content: center; /* Added for vertical centering */
+        align-items: flex-start;
+        gap: 0rem;
+        
+    }
+    
+    .btn-mobile {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 4rem 0; /* Reduced padding */
+        
+    }
+    
+    .about-container {
+        flex-direction: column;
+        min-height: auto; /* Remove fixed height on mobile */
+        gap: 0rem;
+
+    }
+    
+    .about-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 0; /* Remove bottom margin */
+        gap: 0rem;
+    }
+    
+    .btn-desktop {
+        display: none;
+    }
+    
+    .btn-mobile {
+        display: inline-block;
+        margin-top: 1.5rem;
+        text-align: center;
+        width: 100%;
+    }
+    
+    h2 {
+        margin-bottom: 0.5rem;
+    }
+    
+    .about-text {
+        margin-top: 0.25rem; /* Reduced spacing */
+    }
+    
+    .btn {
+        padding: 0.9rem 2rem;
+        font-size: 1.1rem;
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        min-width: 180px;
+    }
+}
+    
+    /* Classes Section */
+    .classes {
+        padding: 5rem 0;
+    }
+    .classes-class {
+        padding: 0;
+    }
+    
+    .section-title {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    
+    .section-title h2 {
+        font-size: 2.5rem;
+        color: var(--primary);
+    }
+    
+    .classes-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+    
+    .class-card {
+        background-color: var(--light);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+    
+    .class-card:hover {
+        transform: translateY(-10px);
+    }
+    
+    .class-image {
+        height: 200px;
+        overflow: hidden;
+    }
+    
+    .class-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+    }
+    
+    .class-card:hover .class-image img {
+        transform: scale(1.1);
+    }
+    
+    .class-content {
+        padding: 1.5rem;
+    }
+    
+    .class-content h3 {
+        color: var(--primary);
+    }
+    
+    /* Testimonials */
+    .testimonials {
+        padding: 3rem 0;
+        background-color: var(--secondary);
+    }
+    
+    .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+    
+    .testimonial-card {
+        background-color: var(--light);
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .testimonial-text {
+        font-style: italic;
+        
+    }
+    
+    .testimonial-author {
+        display: flex;
+        align-items: center;
+    }
+    
+    .author-image {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 1rem;
+    }
+    
+    .author-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+/* Schedule Section */
+.schedule {
+    padding: 3rem 0;
+    background-color: var(--secondary);
+}
+
+/* Toggle schedule (always visible) */
+.schedule-toggle {
+    width: 100%;
+}
+
+/* Hide the old desktop table */
+.schedule-desktop {
+    display: none;
+}
+
+/* Day selector with full names */
+.day-selector {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.day-btn {
+    padding: 0.8rem 0.8rem;
+    background: white;
+    border: 1px solid var(--primary);
+    font-family: 'Raleway', sans-serif;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--dark);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.day-btn:hover {
+    border-color: var(--primary);
+}
+
+.day-btn.active {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .day-selector {
+        gap: 0.5rem;
+    }
+    
+    .day-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+.day-selector {
+    overflow-x: auto;
+    justify-content: center; /* Changed from flex-start to center */
+    padding-bottom: 0.5rem;
+    display: flex; /* Add this to enable flexbox layout */
+    align-items: center; /* Optional: vertically center the elements */
+}
+    
+    .day-btn {
+        padding: 0.6rem 1rem;
+
+        font-size: 0.85rem;
+        flex-shrink: 0;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .day-btn {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+
+/* Day schedule content */
+.day-schedule {
+    display: none;
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--primary);
+    margin-bottom: 1.5rem;
+    width: 500px; /* Add this line */
+    margin-left: auto; /* Add this line */
+    margin-right: auto; /* Add this line */
+}
+
+/* For mobile devices, make it full width */
+@media (max-width: 768px) {
+    .day-schedule {
+        width: 100%;
+        padding: 1.5rem;
+    }
+}
+
+.day-schedule.active {
+    display: block;
+}
+
+.time-slot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.time-slot:last-child {
+    border-bottom: none;
+}
+
+.time-slot .time {
+    font-weight: 600;
+    color: var(--dark);
+    font-size: 1.1rem;
+    min-width: 80px;
+}
+
+.time-slot .class-name {
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* No classes message */
+.no-classes {
+    text-align: center;
+    padding: 2rem;
+    color: #777;
+}
+
+.no-classes p {
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+/* Schedule CTA */
+.schedule-cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Outline button */
+.btn-outline {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.btn-outline:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .day-selector {
+        gap: 0.7rem;
+    }
+    
+    .circle-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+    
+    .time-slot {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 1.2rem 0;
+    }
+    
+    .time-slot .time,
+    .time-slot .class-name {
+        font-size: 1rem;
+    }
+    
+    .schedule-cta {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .btn-outline {
+        margin-left: 0;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .circle-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+    
+    .day-selector {
+        gap: 0.5rem;
+    }
+    
+    .day-schedule {
+        padding: 1.5rem;
+    }
+}
+
+
+/* Schedule Popup (with image) */
+.schedule-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    position: relative;
+    width: auto;
+    text-align: center;
+}
+
+.schedule-image {
+    margin: 1rem 0;
+}
+
+.schedule-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.popup-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.close-popup {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #777;
+}
+
+.close-popup:hover {
+    color: var(--dark);
+}
+
+.close-popup-btn {
+    background: none;
+    border: 2px solid #ccc;
+    color: #777;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.close-popup-btn:hover {
+    background: #f0f0f0;
+}
+
+/* Show popup */
+.schedule-popup.active {
+    display: flex;
+}
+
+/* Responsive adjustments for popup */
+@media (max-width: 768px) {
+    .popup-content {
+        padding: 1.5rem;
+        width: 95%;
+    }
+    
+    .popup-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .close-popup {
+        top: 0.5rem;
+        right: 1rem;
+        font-size: 1.8rem;
+    }
+}
+    
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--light);
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-about {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Megante', sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--light);
+            margin-bottom: 1rem;
+        }
+        
+        .footer-logo img {
+            height: 80px;
+            width: auto;
+        }
+        
+        .footer-community {
+            
+            margin: 0 !important;
+
+            color: var(--light);
+            line-height: 1.5;
+        }
+        
+        .footer-community a {
+            color: #da9b89;
+            font-family: 'Megante', sans-serif;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 0.1rem 0.2rem;
+            border-radius: 3px;
+        }
+        
+        .footer-community a:hover {
+            color: var(--light);
+            background-color: var(--accent);
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--light);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .footer-social a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .footer-newsletter {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .newsletter-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: var(--dark);
+        }
+        
+
+        
+        .footer-location h4 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .location-info {
+            line-height: 1.6;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .copyright a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .copyright a:hover {
+            color: var(--light);
+        }
+        
+        .copyright i {
+            color: #ff6b6b;
+            margin: 0 0.2rem;
+        }
+        
+        .copyright i:hover {
+            color: #ff8e8e;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .footer-logo {
+                font-size: 1.5rem;
+            }
+            
+            .footer-logo img {
+                height: 35px;
+            }
+        }
+    
+
+
+
+
+
+    @media (max-width: 992px) {
+        .schedule-container, .contact-container {
+            flex-direction: column;
+        }
+        
+        .hero-title {
+            font-size: 2.8rem;
+        }
+        
+        .hero-logo {
+            height: 300px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .nav-menu {
+            position: fixed;
+            top: 80px;
+            left: -100%;
+            flex-direction: column;
+            background-color: var(--light);
+            width: 100%;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            padding: 2rem 0;
+        }
+        
+        .nav-menu.active {
+            left: 0;
+        }
+        
+        .nav-menu li {
+            margin: 1.5rem 0;
+        }
+        
+        .social-icons {
+            margin-left: 0;
+            justify-content: center;
+            padding: 1rem 0;
+        }
+        
+        .nav-menu.active .social-icons {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 1rem;
+            padding-top: 1.5rem;
+        }
+        
+        .mobile-menu-btn {
+            display: block;
+        }
+        
+        .hero-title {
+            font-size: 2.2rem;
+            flex-direction: column;
+        }
+        
+        .hero-logo {
+            height: 300px;
+            margin: 15px 0;
+        }
+        
+        .hero p {
+            font-size: 1rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .hero-title {
+            font-size: 1.8rem;
+        }
+        
+        .hero-logo {
+            height: 50px;
+        }
+    }
+.nav-menu li {
+    margin-left: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Megante', sans-serif;
+    color: #2c512fff;
+    font-weight: 500;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--accent);
+    transform: scale(1.1);
+    font-weight: 700;
+}
+
+.header-container a img {
+    transition: transform 0.3s;
+}
+
+.header-container a:hover img {
+    transform: scale(1.1);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-left: 20px;
+}
+
+.social-icons a {
+    font-size: 25px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--accent);
+    transform: scale(1.1);
+}
+
+
+
+
+/* Classes Section */
+.classes-class {
+    margin: 2rem 0;
+}
+
+.classes-fullwidth {
+    width: 100%;
+}
+
+.class-row {
+    height: auto;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.class-content {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    max-width: 800px;
+    padding: 1.5rem;
+}
+
+.class-content h3 {
+    color: white;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Megante', sans-serif;
+}
+
+.fire-icons {
+    display: flex;
+    gap: 8px;
+}
+
+.fire-icons .fa-fire {
+    color: #70996b;
+    font-size: 1.4rem;
+}
+
+.class-content p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* For larger screens - 3 columns layout */
+@media (min-width: 1200px) {
+    .classes-fullwidth {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .class-row {
+        height: 600px;
+        padding: 0;
+    }
+    
+    .class-content {
+        padding: 2rem;
+    }
+    
+    .class-content h3 {
+        font-size: 2.5rem;
+    }
+}
+
+/* For medium screens - 2 columns layout */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .classes-fullwidth {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .class-row:nth-child(3) {
+        grid-column: span 2;
+    }
+    
+    .class-row {
+        height: 550px;
+        padding: 0;
+    }
+}
+
+/* For small screens - single column */
+@media (max-width: 767px) {
+    .class-row {
+        min-height: 450px;
+        padding: 1.5rem 0;
+    }
+    
+    .class-content {
+        padding: 1rem;
+    }
+    
+    .class-content h3 {
+        font-size: 1.8rem;
+    }
+    
+    .fire-icons .fa-fire {
+        font-size: 1.2rem;
+    }
+    
+    .class-content p {
+        font-size: 1rem;
+    }
+}
+
+
+
+/* Stacked Testimonials */
+.testimonial-section {
+    padding: 4rem 0;
+    width: 100%;
+    background-color: white; /* Black background for better video appearance */
+}
+
+.testimonials-stacked {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial-item {
+    margin-bottom: 2rem;
+}
+
+.testimonial-content {
+    position: relative;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.quote-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--accent);
+    font-size: 1.5rem;
+    opacity: 0.3;
+}
+
+.testimonial-text {
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-style: italic;
+    color: var(--dark);
+    text-align: center;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.author-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.author-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.author-info h4 {
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+    color: var(--dark);
+}
+
+.author-info p {
+    color: #777;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.testimonial-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ddd, transparent);
+    margin: 1.5rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .testimonial-content {
+        padding: 1.5rem;
+    }
+    
+    .testimonial-text p {
+        font-size: 1.1rem;
+    }
+    
+    .testimonial-author {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .author-image {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .author-info h4 {
+        font-size: 1rem;
+    }
+    
+    .testimonial-divider {
+        margin: 1rem 0;
+    }
+}
+
+
+        /* Studio Section */
+        .studio {
+            padding: 5rem 0;
+            background-color: #f3f9d2;
+        }
+        
+        .studio-container {
+            display: flex;
+            align-items: stretch; /* Make children stretch to same height */
+            gap: 4rem;
+        }
+        
+        .studio-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Vertically center content */
+        }
+        
+        .studio-map {
+            flex: 1;
+            border-radius: 5px;
+            border: 3px solid #7a9e7e;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center; /* Center map vertically */
+        }
+        
+        .studio-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #8db596, transparent);
+            margin: 1.5rem 0;
+            width: 100%;
+        }
+        
+        .leaf-decoration {
+            color: #8db596;
+            margin: 0 5px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .info-icon {
+            color: #7a9e7e;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            min-width: 30px;
+        }
+        
+        .info-content h3 {
+            color: #7a9e7e;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Responsive adjustments */
+        @media (min-width: 769px) {
+            .studio-container {
+                flex-direction: row-reverse; /* Map on left, info on right */
+            }
+            
+            .studio-map {
+                height: auto; /* Map will stretch to match info height */
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .studio {
+                padding: 3rem 0;
+            }
+            
+            .studio-container {
+                flex-direction: column; /* Stack vertically */
+                gap: 2rem;
+            }
+            
+            .studio-info {
+                order: 1; /* Info first on mobile */
+            }
+            
+            .studio-map {
+                order: 2; /* Map after info on mobile */
+                height: 300px; /* Fixed height on mobile */
+            }
+        }
+
+
+/* Video Section */
+.video-section {
+    padding: 2rem 0;
+    width: 100%;
+    background-color: #ffffff; /* Black background for better video appearance */
+}
+
+.video-container {
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers entire container */
+    display: block;
+}
+
+/* Custom controls appearance when video is clicked */
+.video-container video:focus {
+    outline: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .video-container {
+        height: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-container {
+        height: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-container {
+        height: 400px;
+    }
+    
+    .video-section {
+        padding: 1.5rem 0;
+    }
+}
+
+
+    .divider {
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #8db596, transparent);
+        margin: 1.5rem 0;
+        width: 100%;
+    }
+
+            /* Decorative elements */
+        .leaf-decoration {
+            color: #8db596;
+            font-size: 1.5rem;
+            margin: 0 5px;
+        }
+
+
+                /* Asociate Section */
+        .asociate {
+            padding: 5rem 0;
+            background-color: #7a9e7e; /* Green background */
+            margin-bottom: 2rem; /* White space before and after */
+        }
+        
+        .asociate-content {
+            text-align: center;
+            padding-bottom: 0 2rem;
+        }
+        
+        .asociate-title {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+        
+        .asociate-link {
+            display: inline-block;
+            background-color: white;
+            color: #7a9e7e;
+            padding: 1.2rem 3.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 2px solid white;
+        }
+        
+        .asociate-link:hover {
+            background-color: #f3f9d2;
+            color: #5a7e5e;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .asociate {
+                padding: 3rem 0;
+            }
+            
+            .asociate-title {
+                font-size: 2rem;
+            }
+            
+            .asociate-link {
+                padding: 1rem 2.5rem;
+                font-size: 1.3rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .asociate-title {
+                font-size: 1.8rem;
+            }
+            
+            .asociate-link {
+                padding: 0.9rem 2rem;
+                font-size: 1.2rem;
+            }
+        }
+
+
+
+                .inquiry-link {
+            color: #7a9e7e;
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 0.1rem 0.2rem;
+        }
+        
+        .inquiry-link:hover {
+            color: #5a7e5e;
+            background-color: rgba(122, 158, 126, 0.1);
+            border-radius: 3px;
+        }
+        
+        .inquiry-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: #7a9e7e;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+        
+        .inquiry-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    
+
+.copyright a:hover i {
+    color: var(--accent) !important;
+}
+
+
+
+/* Smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fade-in animation for sections */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered animation for class cards */
+.class-row {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.class-row.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delay for staggered animations */
+.class-row:nth-child(1) { transition-delay: 0.1s; }
+.class-row:nth-child(2) { transition-delay: 0.2s; }
+.class-row:nth-child(3) { transition-delay: 0.3s; }
+
+/* Fade-in for testimonial items */
+.testimonial-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.testimonial-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger testimonial animations */
+.testimonial-item:nth-child(1) { transition-delay: 0.1s; }
+.testimonial-item:nth-child(2) { transition-delay: 0.2s; }
+.testimonial-item:nth-child(3) { transition-delay: 0.3s; }
+
+/* Info items animation */
+.info-item {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.info-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Stagger info items */
+.info-item:nth-child(1) { transition-delay: 0.1s; }
+.info-item:nth-child(2) { transition-delay: 0.2s; }
+.info-item:nth-child(3) { transition-delay: 0.3s; }
+.info-item:nth-child(4) { transition-delay: 0.4s; }
+
+/* Button hover enhancements */
+.btn, .asociate-link {
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+/* Loading animation for hero section */
+.hero-content {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.hero-content.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Subtle pulse animation for CTA buttons */
+@keyframes subtlePulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.asociate-link {
+    animation: subtlePulse 3s infinite ease-in-out;
+}
+
+/* Map loading animation */
+.studio-map {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.studio-map.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Video loading animation */
+.video-container {
+    opacity: 0;
+    transform: scale(0.98);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.video-container.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Simple loading state */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    z-index: 9999;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+body.animations-ready::before {
+    transform: translateX(0);
+}
+
+/* Hide initial FOUC (Flash of Unstyled Content) */
+body:not(.animations-ready) {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+body.animations-ready {
+    opacity: 1;
+}
+
+</style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="#hero">
+                <img src="logo.png" alt="YogaMaya" style="height: 50px;">
+            </a>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-menu">
+                
+                <li><a href="#classes">ESTILOS</a></li>
+                <li><a href="#schedule">HORARIOS</a></li>
+                <li><a href="#studio">ESPACIO</a></li>
+                <li class="social-icons">
+                    <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/yournumber" target="_blank" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container hero-content">
+            <h1 class="hero-title">
+                <img src="logo_sentence.png" alt="Uṣṇa Logo" class="hero-logo">
+            </h1>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container about-container">
+            <div class="about-header">
+                <h2>
+                    <img src="Bienvenidos.png" alt="Bienvenidos a Usna" style="height: 12rem;">
+                </h2>
+
+            </div>
+            
+            <div class="about-text">
+                <div class="divider"></div>
+                <p><b>
+                    Uṣṇa, se propone como un espacio de encuentro entre 
+                    la exploración tradicional de la práctica y la fluidez del 
+                    yoga postural moderno.
+                </b></p>
+                <p>
+                    Siempre con la <b>conciencia corporal y la respiración</b> como guía en <b>Uṣṇa</b>, ofrecemos clases con estilos definidos pero adaptables a las necesidades de <b>todos los cuerpos</b>. 
+                    Desde las secuencias dinámicas del <i>vinyāsa</i>, hasta el trabajo en la presencia del <i>yin</i>, nuestras clases están diseñadas para que tanto alumnos nuevos como practicantes avanzados <b>conecten con su propio ritmo.</b>
+                </p>
+                
+                
+                <img src="tupractica.png" alt="Bienvenidos a Usna" style="height: 2rem;">                
+
+                <br><div class="divider"></div>
+                
+            </div>
+        </div>
+    </section>
+
+        <!-- Asociate Section -->
+    <section class="asociate">
+        <div class="container">
+            <div class="asociate-content">
+                <h2 class="asociate-title">¡UNITE A NUESTRA COMUNIDAD!</h2>
+                <a href="#contact" class="asociate-link">ASOCIATE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classes Section -->
+    <section id="classes" class="classes-class">
+        <div class="classes-fullwidth">
+            <!-- Class 1 -->
+            <div class="class-row" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(29, 47, 14, 0.7)), url('yoga1.png') no-repeat center center/cover;">
+                <div class="container">
+                    <div class="class-content">
+                        <div class="fire-icons" style="margin-bottom: 0.3rem;">
+                            <i class="fas fa-fire"></i>
+                            <i class="fas fa-fire"></i>
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h3>VINYASA YOGA</h3>
+                        <p>Una clase dinámica y energizante diseñada para fortalecer tu cuerpo y mente. 
+                            A través de secuencias fluidas sincronizamos la respiración con el movimiento para generar calor interno. 
+                            Esta práctica es ideal para quienes buscan un entrenamiento completo que combina fuerza, resistencia y flexibilidad.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Class 2 -->
+            <div class="class-row" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(29, 47, 14, 0.7)), url('yoga2.jpg') no-repeat center center/cover;">
+                <div class="container">
+                    <div class="class-content">
+                        <div class="fire-icons" style="margin-bottom: 0.3rem;">
+                            <i class="fas fa-fire"></i>
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h3>HATHA YOGA</h3>
+                        <p>
+                            El Hatha es una práctica más tradicional que se enfoca en mantener las posturas por un tiempo más prolongado. 
+                            Esta clase es ideal para quienes buscan un ritmo más lento, ayudando a liberar tensiones y permitiéndote conectar de forma más íntima con cada postura y el cuerpo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Class 3 -->
+            <div class="class-row" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(29, 47, 14, 0.7)), url('yoga3.jpg') no-repeat center center/cover;">
+                <div class="container">
+                    <div class="class-content">
+                        <div class="fire-icons" style="margin-bottom: 0.3rem;">
+                            <i class="fas fa-fire"></i>
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h3>YIN YOGA</h3>
+                        <p>
+                            Una práctica de posturas sostenidas enfocada en el estiramiento profundo de los tejidos conectivos del cuerpo: ligamentos, articulaciones y fascias. 
+                            La permanencia en las posturas permite que la gravedad haga su trabajo y libere la tensión acumulada. 
+                            Ideal para complementar prácticas más dinámicas, como <i>running</i>, y para cultivar la calma mental. Es una invitación a la quietud y a la introspección.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Schedule Section -->
+<section id="schedule" class="schedule">
+    <div class="container">
+        <div class="section-title">
+            <h2>HORARIOS</h2>
+        <!-- Always use toggle schedule (for both desktop and mobile) -->
+        <div class="schedule-toggle">
+        <div class="day-selector">
+            <button class="day-btn" data-day="lunes">Lunes</button>
+            <button class="day-btn" data-day="martes">Martes</button>
+            <button class="day-btn" data-day="miercoles">Miércoles</button>
+            <button class="day-btn" data-day="jueves">Jueves</button>
+            <button class="day-btn" data-day="viernes">Viernes</button>
+            <button class="day-btn" data-day="sabado">Sábado</button>
+        </div>
+            
+            <div class="day-schedule" id="lunes">
+                <div class="time-slot">
+                    <span class="time">9:30 AM</span>
+                    <span class="class-name">Hatha Yoga</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">6:00 PM</span>
+                    <span class="class-name">Vinyasa Flow</span>
+                </div>
+            </div>
+            
+            <div class="day-schedule" id="martes">
+                <div class="time-slot">
+                    <span class="time">11:00 AM</span>
+                    <span class="class-name">Vinyasa Flow</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">6:00 PM</span>
+                    <span class="class-name">Hatha Yoga</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">7:30 PM</span>
+                    <span class="class-name">Vinyasa Flow</span>
+                </div>
+            </div>
+            
+            <div class="day-schedule" id="miercoles">
+                <div class="time-slot">
+                    <span class="time">9:30 AM</span>
+                    <span class="class-name">Hatha Yoga</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">6:00 PM</span>
+                    <span class="class-name">Vinyasa Flow</span>
+                </div>
+            </div>
+            
+            <div class="day-schedule" id="jueves">
+                <div class="time-slot">
+                    <span class="time">11:00 AM</span>
+                    <span class="class-name">Vinyasa Flow</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">6:00 PM</span>
+                    <span class="class-name">Hatha Yoga</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">7:30 PM</span>
+                    <span class="class-name">Vinyasa Flow</span>
+                </div>
+            </div>
+            
+            <div class="day-schedule" id="viernes">
+                <div class="time-slot">
+                    <span class="time">9:30 AM</span>
+                    <span class="class-name">Yin Yoga</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">5:30 PM</span>
+                    <span class="class-name">Yin Yoga</span>
+                </div>
+            </div>
+            
+            <div class="day-schedule" id="sabado">
+                <div class="time-slot">
+                    <span class="time">8:00 AM</span>
+                    <span class="class-name">Vinyasa Flow</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">9:30 AM</span>
+                    <span class="class-name">Hatha Yoga</span>
+                </div>
+            </div>
+            
+
+            
+        </div>
+        
+        <div class="schedule-cta">
+            <p><i>            Por clases particulares y otras consultas, <a href="#contact" class="inquiry-link">escribinos</a></i></p>
+            <div class="btn-container">
+                <a href="#contact" class="btn">Asociate</a>
+                <a href="#" class="btn" id="view-full-schedule">Horario Completo</a>
+            </div>        
+            </div>
+    </div>
+</section>
+
+<!-- Full Schedule Popup (with image) -->
+<div class="schedule-popup" id="schedule-popup">
+    <div class="popup-content">
+        <span class="close-popup">&times;</span>
+        <h3></h3><br>
+        <div class="schedule-image">
+            <img src="schedule.png" alt="Horario Completo de Clases" style="width: 100%;">
+        </div>
+        <div class="popup-actions">
+            <a href="#contact" class="btn">Asociate</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Video Section -->
+<section class="video-section">
+    <div class="video-container">
+        <!-- Self-hosted MP4 video with autoplay (muted) -->
+        <video autoplay muted loop playsinline poster="video-poster.jpg">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
+
+
+    <!-- Studio Section -->
+    <section id="studio" class="studio">
+        <div class="container studio-container">
+            <div class="studio-info">
+                <h2>
+                    <img src="espacio.png" alt="Nuestro Estudio" style="height: 3rem;">
+                </h2>
+                
+                <div class="divider"></div>
+                
+                <script src="website-parameters.js"></script>
+
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Ubicación</h3>
+                        <p id="ubicacion-text"></p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Horarios de Atención</h3>
+                        <p id="horarios-text"></p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Contacto</h3>
+                        <p id="contacto-text"></p>
+                    </div>
+                </div>
+
+                <script>
+                    // Populate the information from parameters
+                    document.getElementById('ubicacion-text').textContent = websiteParameters.ubicacion;
+                    document.getElementById('horarios-text').innerHTML = `${websiteParameters.horarios.semana}<br>${websiteParameters.horarios.sabados}<br>${websiteParameters.horarios.domingos}`;
+                    document.getElementById('contacto-text').innerHTML = `Tel & WhatsApp: ${websiteParameters.telefono}<br>Email: ${websiteParameters.email}`;
+                    // Populate footer location
+                    document.getElementById('footer-ubicacion-text').textContent = websiteParameters.footerLocation;
+                
+                </script>
+                
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Instalaciones</h3>
+                        <p>Estudio climatizado • Vestuarios • Duchas • Área de descanso • Estacionamiento gratuito</p>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+            </div>
+            
+            <div class="studio-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.603166048382!2d-58.45538432364229!3d-34.76208137287758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd2a4210d3057%3A0x5babc2c2d6783e2d!2sRamon%20Falcon%20140%2C%20B1832%20Lomas%20de%20Zamora%2C%20Provincia%20de%20Buenos%20Aires%2C%20Argentina!5e0!3m2!1sen!2sus!4v1719877231674!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonial-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>TESTIMONIOS DE NUESTRA COMUNIDAD</h2>
+                
+            </div>
+            
+            <div class="testimonials-stacked">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="testimonial-text">
+                            <p>"YogaMaya has transformed my life. The instructors are knowledgeable and supportive, and the community is wonderful." - <b>Sraah</b></p>
+                        </div>
+                    </div>
+                    <div class="testimonial-divider"></div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="testimonial-text">
+                            <p>"YogaMaya has transformed my life. The instructors are knowledgeable and supportive, and the community is wonderful." - <b>Sraah</b></p>
+                        </div>
+                    </div>
+                    <div class="testimonial-divider"></div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="testimonial-text">
+                            <p>"YogaMaya has transformed my life. The instructors are knowledgeable and supportive, and the community is wonderful." - <b>Sraah</b></p>
+                        </div>
+                    </div>
+                    
+                </div>
+                    <!-- No divider after the last item -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Asociate Section -->
+    <section class="asociate">
+        <div class="container">
+            <div class="asociate-content">
+                <h2 class="asociate-title">¡UNITE A NUESTRA COMUNIDAD!</h2>
+                <a href="#contact" class="asociate-link">ASOCIATE</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="logo_footer.png" alt="Uṣṇa logo">
+                </div>
+                <p class="footer-community">
+                   <a href="#contact">ENCONTRÁ TU PRÁCTICA<br>
+                    ASOCIATE A NUESTRA COMUNIDAD</a>
+                </p>
+                
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-location">
+                <h4>ESTUDIO DE YOGA</h4>
+                <div class="location-info">
+                    <p id="footer-ubicacion-text" style="font-family: 'Megante', sans-serif; text-transform: uppercase;">
+                        Edificio Panamericana 50<br> Pilar, Provincia de Buenos Aires<br> Argentina <i class="fas fa-heart"></i>
+                    <br>(011) 4245-7890
+                    <br>info@usna.com.ar
+                    
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+<p>&copy; 2025 | hecho con <a href="https://instagram.com/yourprofile" target="_blank"><i class="fas fa-heart" style="color: white;"></i></a></p>        </div>
+    </footer>
+
+    <script>
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        mobileMenuBtn.innerHTML = navMenu.classList.contains('active') ? 
+            '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+    
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+    });
+    
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Navbar appear on scroll
+    const header = document.querySelector('header');
+    let lastScrollY = window.scrollY;
+    
+    // Initially hide the header
+    header.classList.add('header-hidden');
+    
+    window.addEventListener('scroll', () => {
+        // Show navbar when scrolling down (after 50px), hide when at top
+        if (window.scrollY > 50) {
+            header.classList.remove('header-hidden');
+        } else {
+            header.classList.add('header-hidden');
+        }
+        
+        lastScrollY = window.scrollY;
+    });
+
+
+    // Mobile schedule day toggle
+    document.querySelectorAll('.day-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons and schedules
+            document.querySelectorAll('.day-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.day-schedule').forEach(schedule => schedule.classList.remove('active'));
+            
+            // Add active class to clicked button
+            button.classList.add('active');
+            
+            // Show corresponding schedule
+            const day = button.getAttribute('data-day');
+            document.getElementById(day).classList.add('active');
+        });
+    });
+
+
+    // Set today's day as active for schedule
+    document.addEventListener('DOMContentLoaded', function() {
+        const days = ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
+        const today = new Date().getDay(); // 0 = Sunday, 1 = Monday, etc.
+        
+        // If Sunday, show Monday instead
+        const dayToShow = today === 0 ? 1 : today;
+        const dayId = days[dayToShow];
+        
+        // Activate the corresponding button and schedule
+        const dayButton = document.querySelector(`.day-btn[data-day="${dayId}"]`);
+        if (dayButton) {
+            dayButton.classList.add('active');
+            document.getElementById(dayId).classList.add('active');
+        }
+        
+        // Add click events to day buttons
+        document.querySelectorAll('.day-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.day-btn').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.day-schedule').forEach(schedule => schedule.classList.remove('active'));
+                
+                button.classList.add('active');
+                const day = button.getAttribute('data-day');
+                document.getElementById(day).classList.add('active');
+            });
+        });
+        
+// Popup functionality
+const popup = document.getElementById('schedule-popup');
+const viewButton = document.getElementById('view-full-schedule');
+const closeButton = document.querySelector('.close-popup');
+const closePopupBtn = document.querySelector('.close-popup-btn');
+
+if (viewButton && popup) {
+    viewButton.addEventListener('click', () => {
+        popup.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+}
+
+// Close popup function
+function closePopup() {
+    popup.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// Add event listeners for closing
+if (closeButton) {
+    closeButton.addEventListener('click', closePopup);
+}
+
+if (closePopupBtn) {
+    closePopupBtn.addEventListener('click', closePopup);
+}
+
+// Close popup when clicking outside
+if (popup) {
+    popup.addEventListener('click', (e) => {
+        if (e.target === popup) {
+            closePopup();
+        }
+    });
+}
+
+// Footer schedule link
+const footerLink = document.getElementById('footer-schedule-link');
+if (footerLink) {
+    footerLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (popup) {
+            popup.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    });
+}
+    });
+
+// Popup functionality
+const popup = document.getElementById('schedule-popup');
+const viewButton = document.getElementById('view-full-schedule');
+const closeButton = document.querySelector('.close-popup');
+const closePopupBtn = document.querySelector('.close-popup-btn');
+
+if (viewButton && popup) {
+    viewButton.addEventListener('click', () => {
+        popup.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+}
+
+// Close popup function
+function closePopup() {
+    popup.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// Add event listeners for closing
+if (closeButton) {
+    closeButton.addEventListener('click', closePopup);
+}
+
+if (closePopupBtn) {
+    closePopupBtn.addEventListener('click', closePopup);
+}
+
+// Close popup when clicking outside
+if (popup) {
+    popup.addEventListener('click', (e) => {
+        if (e.target === popup) {
+            closePopup();
+        }
+    });
+}
+
+
+// Intersection Observer for scroll animations
+function initScrollAnimations() {
+    const sections = document.querySelectorAll('section');
+    const classRows = document.querySelectorAll('.class-row');
+    const testimonials = document.querySelectorAll('.testimonial-item');
+    const infoItems = document.querySelectorAll('.info-item');
+    const studioMap = document.querySelector('.studio-map');
+    const videoContainer = document.querySelector('.video-container');
+    
+    const options = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, options);
+    
+    // Observe sections
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+    
+    // Observe class rows
+    classRows.forEach(row => {
+        observer.observe(row);
+    });
+    
+    // Observe testimonials
+    testimonials.forEach(testimonial => {
+        observer.observe(testimonial);
+    });
+    
+    // Observe info items
+    infoItems.forEach(item => {
+        observer.observe(item);
+    });
+    
+    // Observe map and video
+    if (studioMap) observer.observe(studioMap);
+    if (videoContainer) observer.observe(videoContainer);
+}
+
+// Hero content loading animation
+function animateHero() {
+    const heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+        // Small delay to allow initial render
+        setTimeout(() => {
+            heroContent.classList.add('loaded');
+        }, 300);
+    }
+}
+
+// Initialize all animations when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initScrollAnimations();
+    animateHero();
+    
+    // Add a small delay to ensure styles are applied before animations start
+    setTimeout(() => {
+        document.body.classList.add('animations-ready');
+    }, 100);
+});
+
+// Handle page navigation with smooth transitions
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            // Add a class to indicate navigation is happening
+            document.body.classList.add('navigating');
+            
+            // Scroll to target
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+            
+            // Remove navigation class after scroll completes
+            setTimeout(() => {
+                document.body.classList.remove('navigating');
+            }, 1000);
+        }
+    });
+});
+
+
+    </script>
+</body>
+</html>
