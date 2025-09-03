@@ -275,6 +275,71 @@
     gap: 1rem;
 }
 
+/* About Section - Mobile Responsiveness Fixes */
+@media (max-width: 768px) {
+  .about {
+    padding: 2rem 1rem !important; /* Add horizontal padding */
+  }
+
+  .about-container {
+    display: flex; /* Use flex to control the layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 1.5rem; /* Reduce gap on mobile */
+  }
+
+  .about-text {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  /* Fix for the welcome image */
+  .about-header img {
+    max-width: 100%;
+    height: auto !important; /* Make responsive */
+  }
+
+  /* Fix for the tupractica.png image */
+  .about-text img {
+    max-width: 80%; /* Make it responsive */
+    height: auto !important; /* Remove fixed height */
+    display: block;
+    margin: 0 auto; /* Center it */
+  }
+
+  /* Improve text readability */
+  .about-text p {
+    font-size: 16px; /* Slightly smaller text on mobile */
+    line-height: 1.5;
+    text-align: justify; /* Better text alignment */
+    hyphens: auto; /* Enable hyphenation */
+  }
+
+}
+
+/* Additional improvements for very small screens */
+@media (max-width: 480px) {
+  .about {
+    padding: 1.5rem 0.8rem !important;
+  }
+  
+  .about-text p {
+    font-size: 15px;
+  }
+  
+  .about-text img {
+    max-width: 70%;
+  }
+}
+
+/* Ensure text doesn't overflow containers */
+.about-text p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
 .divider {
     height: 2px;
     background: linear-gradient(90deg, transparent, #8db596, transparent);
@@ -289,20 +354,6 @@
 
 /* Responsive adjustments */
 @media (min-width: 1000px) {
-    .about-container {
-        flex-direction: row;
-        align-items: stretch; /* Changed to stretch */
-        gap: 0rem;
-    }
-    
-    .about-header {
-        flex: 1;
-        flex-direction: column;
-        justify-content: center; /* Added for vertical centering */
-        align-items: flex-start;
-        gap: 0rem;
-        
-    }
     
     .btn-mobile {
         display: none !important;
@@ -310,24 +361,6 @@
 }
 
 @media (max-width: 768px) {
-    .about {
-        padding: 4rem 0; /* Reduced padding */
-        
-    }
-    
-    .about-container {
-        flex-direction: column;
-        min-height: auto; /* Remove fixed height on mobile */
-        gap: 0rem;
-
-    }
-    
-    .about-header {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 0; /* Remove bottom margin */
-        gap: 0rem;
-    }
     
     .btn-desktop {
         display: none;
@@ -344,9 +377,6 @@
         margin-bottom: 0.5rem;
     }
     
-    .about-text {
-        margin-top: 0.25rem; /* Reduced spacing */
-    }
     
     .btn {
         padding: 0.9rem 2rem;
@@ -1577,8 +1607,20 @@
 .copyright a:hover i {
     color: var(--accent) !important;
 }
+    /* For WebKit browsers (Chrome, Safari) */
+    body::-webkit-scrollbar {
+    display: none;
+    }
 
+    /* For Firefox */
+    body {
+    scrollbar-width: none;
+    }
 
+    /* For Internet Explorer and Edge */
+    body {
+    -ms-overflow-style: none;
+    }
 
 /* Smooth scrolling for the entire page */
 html {
@@ -1730,10 +1772,7 @@ body.animations-ready {
 
 /* Fix About section padding on mobile */
 @media (max-width: 768px) {
-  .about-container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+
   
   .about-text {
     padding-left: 0.5rem;
@@ -1773,6 +1812,10 @@ body.animations-ready {
   }
 }
 
+.non-interactive {
+    pointer-events: none; /* Prevents clicks, hovers, etc. */
+    user-select: none;    /* Prevents text from being selected */
+}
 
 </style>
 </head>
@@ -2007,7 +2050,7 @@ body.animations-ready {
         </div>
         
         <div class="schedule-cta">
-            <p><i>            Por clases particulares y otras consultas, <a href="#contact" class="inquiry-link">escribinos</a></i></p>
+            <p style="margin-bottom: 0rem !important;"><i>            Por clases particulares y otras consultas, <a href="#contact" class="inquiry-link">escribinos</a></i></p>
             <div class="btn-container">
                 <a href="#contact" class="btn">Asociate</a>
                 <a href="#" class="btn" id="view-full-schedule">Horario Completo</a>
@@ -2502,7 +2545,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+function manageInteraction() {
+    const elementsToBlock = document.querySelectorAll('.blockable-element'); // Replace with your desired selector
+    if (window.innerWidth <= 700) {
+        elementsToBlock.forEach(el => {
+            el.classList.add('non-interactive');
+        });
+    } else {
+        elementsToBlock.forEach(el => {
+            el.classList.remove('non-interactive');
+        });
+    }
+}
 
+// Run on page load and window resize
+window.addEventListener('load', manageInteraction);
+window.addEventListener('resize', manageInteraction);
     </script>
 </body>
 </html>
