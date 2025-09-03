@@ -1054,7 +1054,7 @@
 
 .nav-menu a:hover {
     color: var(--accent);
-    transform: scale(1.1);
+    
     font-weight: 700;
 }
 
@@ -1063,7 +1063,7 @@
 }
 
 .header-container a:hover img {
-    transform: scale(1.1);
+    opacity: 0.8;
 }
 
 .social-icons {
@@ -1079,7 +1079,7 @@
 
 .social-icons a:hover {
     color: var(--accent);
-    transform: scale(1.1);
+    
 }
 
 
@@ -1376,7 +1376,7 @@
         }
         
         /* Responsive adjustments */
-        @media (min-width: 769px) {
+        @media (min-width: 1000px) {
             .studio-container {
                 flex-direction: row-reverse; /* Map on left, info on right */
             }
@@ -1386,7 +1386,7 @@
             }
         }
         
-        @media (max-width: 768px) {
+        @media (max-width: 1000px) {
             .studio {
                 padding: 3rem 0;
             }
@@ -1644,10 +1644,8 @@ section.visible {
 }
 
 /* Stagger info items */
-.info-item:nth-child(1) { transition-delay: 0.1s; }
-.info-item:nth-child(2) { transition-delay: 0.2s; }
-.info-item:nth-child(3) { transition-delay: 0.3s; }
-.info-item:nth-child(4) { transition-delay: 0.4s; }
+.info-item:nth-child { transition-delay: 0.3s; }
+
 
 /* Button hover enhancements */
 .btn, .asociate-link {
@@ -1728,6 +1726,53 @@ body:not(.animations-ready) {
 body.animations-ready {
     opacity: 1;
 }
+
+
+/* Fix About section padding on mobile */
+@media (max-width: 768px) {
+  .about-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .about-text {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+/* Fix Schedule CTA spacing on mobile */
+@media (max-width: 768px) {
+  .schedule-cta p {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .btn {
+    margin: 0.5rem 0 !important;
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Additional improvement for better mobile spacing */
+@media (max-width: 480px) {
+  .schedule-cta {
+    padding: 0 1rem;
+  }
+  
+  .btn {
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
 
 </style>
 </head>
