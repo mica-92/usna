@@ -319,7 +319,7 @@
   }
   
   .about-text p {
-    font-size: 15px;
+    font-size: 18px;
   }
   
   .about-text img {
@@ -327,11 +327,7 @@
   }
 }
 
-/* Ensure text doesn't overflow containers */
-.about-text p {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-}
+
 
 .divider {
     height: 2px;
@@ -840,14 +836,14 @@
             align-items: center;
             gap: 0.5rem;
             font-family: 'Megante', sans-serif;
-            font-size: 4rem;
+            font-size: 2rem;
             font-weight: 700;
             color: var(--light);
             margin-bottom: 1rem;
         }
         
         .footer-logo img {
-            height: 80px;
+            height: 30px;
             width: auto;
         }
         
@@ -1001,6 +997,10 @@
     }
     
     @media (max-width: 768px) {
+        p {
+            font-size: 18px;
+        }
+
         .nav-menu {
             position: fixed;
             top: 80px;
@@ -1151,7 +1151,7 @@
 
 .class-content p {
     margin-bottom: 1rem;
-    font-size: 1.1rem;
+    font-size: 18px;
     line-height: 1.7;
 }
 
@@ -1213,7 +1213,7 @@
     }
     
     .class-content p {
-        font-size: 1rem;
+        font-size: 18px;
     }
 }
 
@@ -1223,7 +1223,7 @@
 .testimonial-section {
     padding: 4rem 0;
     width: 100%;
-    background-color: white; /* Black background for better video appearance */
+    background-color: var(--secondary); /* Black background for better video appearance */
 }
 
 .testimonials-stacked {
@@ -1802,6 +1802,328 @@ body.animations-ready {
     user-select: none;    /* Prevents text from being selected */
 }
 
+
+
+
+        /* Director Section Styles */
+        .directora {
+            padding: 3rem 0;
+            background-color: var(--light);
+        }
+        
+        .directora-container {
+            display: flex;
+            gap: 4rem;
+            align-items: flex-start;
+            margin-bottom: 4rem;
+        }
+        
+        .directora-photo {
+            flex: 1;
+            text-align: center;
+            
+        }
+        
+        .directora-photo img {
+            width: 100%;
+            max-width: 400px;
+            aspect-ratio: 1/2;
+            object-fit: cover;
+            border-radius: 4px;
+            border-color: #2c3e50;
+            border: #2c3e50 4px solid;
+        }
+        
+        .photo-caption {
+            margin-top: 1rem;
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .directora-content {
+            flex: 1;
+        }
+        
+        .directora-name {
+            margin-bottom: 0.5rem;
+        }
+        
+        .directora-content h3 {
+            color: var(--primary);
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+        
+        .acreditacion {
+            color: var(--text-light);
+            color: var(--primary);
+            font-size: 18px;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        
+        .divider {
+            height: 1px;
+            background: rgba(0, 0, 0, 0.1);
+            margin: 1.5rem 0;
+            width: 100%;
+        }
+        
+        .directora-content p {
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        
+        .directora-content blockquote {
+            border-left: 2px solid var(--primary);
+            padding-left: 1.2rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        
+        .credentials {
+            margin-top: 1.5rem;
+        }
+        
+        .credential-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+            color: var(--text-light);
+            font-size: 18px;
+        }
+        
+        .credential-item i {
+            color: var(--primary);
+            margin-right: 0.8rem;
+            font-size: 0.9rem;
+        }
+        
+        /* Toggle Section Styles - Minimalista */
+        .toggle-section {
+            margin-top: 3rem;
+        }
+        
+        .toggle-container {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        
+        .toggle-header {
+            padding: 1.2rem 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .toggle-header:hover {
+            opacity: 0.7;
+        }
+        
+        .toggle-header h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--dark);
+            font-family: 'Raleway', sans-serif;
+            font-style: italic;
+            letter-spacing: 0.5px;
+        }
+        
+        .toggle-icon {
+            transition: transform 0.3s;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+        
+        .toggle-content {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.5s ease;
+        }
+        
+        .toggle-content-inner {
+            padding: 0 0 1.5rem 0;
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+        
+        .toggle-content-inner p {
+            margin-bottom: 1rem;
+        }
+        
+        .toggle-container.active .toggle-content {
+            max-height: 1000px;
+        }
+        
+        .toggle-container.active .toggle-icon {
+            transform: rotate(180deg);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .directora-container {
+                flex-direction: column;
+                gap: 2.5rem;
+            }
+            
+            .directora-photo {
+                width: 100%;
+            }
+            
+            .directora-photo img {
+                width: 100%;
+                max-width: 100%;
+                aspect-ratio: 2/1;
+                object-fit: cover;
+                object-position: 50% 12.5%; /* This is your solution */
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .directora {
+                padding: 2rem 0;
+            }
+            
+
+            
+            .toggle-header {
+                padding: 1rem 0;
+            }
+            
+            .toggle-header h3 {
+                font-size: 1rem;
+            }
+        }
+        
+/* Director Section Animations - Fixed */
+.directora-container {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.directora-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.directora-photo img {
+    transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: scale(0.95);
+    opacity: 0.9;
+    filter: grayscale(20%);
+}
+
+.directora-photo img:hover {
+    transform: scale(1);
+    opacity: 1;
+    filter: grayscale(0%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.directora-content {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.directora-content.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.credential-item {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.credential-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger animation for credentials */
+.credential-item:nth-child(1) { transition-delay: 0.1s; }
+.credential-item:nth-child(2) { transition-delay: 0.2s; }
+.credential-item:nth-child(3) { transition-delay: 0.3s; }
+
+/* Toggle animations - Slower like testimonials */
+.toggle-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.toggle-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toggle-container {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.toggle-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger animation for toggles */
+.toggle-container:nth-child(1) { transition-delay: 0.1s; }
+.toggle-container:nth-child(2) { transition-delay: 0.2s; }
+.toggle-container:nth-child(3) { transition-delay: 0.3s; }
+
+.toggle-content {
+    transition: max-height 0.7s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.5s ease;
+    opacity: 0;
+}
+
+.toggle-container.active .toggle-content {
+    opacity: 1;
+}
+
+.toggle-header {
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+    padding: 1.2rem 1rem;
+}
+
+.toggle-header:hover {
+    background-color: rgba(122, 158, 126, 0.05);
+}
+
+.toggle-header h3 {
+    transition: color 0.3s ease;
+}
+
+.toggle-header:hover h3 {
+    color: var(--primary);
+}
+
+.toggle-icon {
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), color 0.3s ease;
+}
+
+.toggle-header:hover .toggle-icon {
+    color: var(--accent);
+}
+
+
 </style>
 </head>
 <body>
@@ -1877,13 +2199,14 @@ body.animations-ready {
         <div class="container">
             <div class="asociate-content">
                 <h2 class="asociate-title">¡UNITE A NUESTRA COMUNIDAD!</h2>
-                <a href="#contact" class="asociate-link">ASOCIATE</a>
+                <a href="#contact" class="asociate-link">COMENZÁ HOY</a>
             </div>
         </div>
     </section>
 
     <!-- Classes Section -->
     <section id="classes" class="classes-class">
+        
         <div class="classes-fullwidth">
             <!-- Class 1 -->
             <div class="class-row" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(29, 47, 14, 0.7)), url('yoga1.png') no-repeat center center/cover;">
@@ -1940,11 +2263,15 @@ body.animations-ready {
     </section>
 
 
+
+
+
+    
 <!-- Schedule Section -->
 <section id="schedule" class="schedule">
     <div class="container">
         <div class="section-title">
-            <h2>HORARIOS</h2>
+            <h2>HORARIOS</h2><BR>
         <!-- Always use toggle schedule (for both desktop and mobile) -->
         <div class="schedule-toggle">
         <div class="day-selector">
@@ -1958,90 +2285,123 @@ body.animations-ready {
             
             <div class="day-schedule" id="lunes">
                 <div class="time-slot">
-                    <span class="time">9:30 AM</span>
+                    <span class="time">8:00 AM</span>
                     <span class="class-name">Hatha Yoga</span>
                 </div>
                 <div class="time-slot">
+                    <span class="time">9:00 AM</span>
+                    <span class="class-name">Vinyasa Flow</span>
+                </div>
+                <div class="time-slot">
                     <span class="time">6:00 PM</span>
+                    <span class="class-name">Vinyasa Flow</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">7:00 PM</span>
                     <span class="class-name">Vinyasa Flow</span>
                 </div>
             </div>
             
             <div class="day-schedule" id="martes">
                 <div class="time-slot">
-                    <span class="time">11:00 AM</span>
+                    <span class="time">8:00 AM</span>
+                    <span class="class-name">Hatha Yoga</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">9:00 AM</span>
                     <span class="class-name">Vinyasa Flow</span>
                 </div>
                 <div class="time-slot">
                     <span class="time">6:00 PM</span>
-                    <span class="class-name">Hatha Yoga</span>
+                    <span class="class-name">Vinyasa Flow</span>
                 </div>
                 <div class="time-slot">
-                    <span class="time">7:30 PM</span>
-                    <span class="class-name">Vinyasa Flow</span>
+                    <span class="time">7:00 PM</span>
+                    <span class="class-name">Yin Yoga</span>
                 </div>
             </div>
             
             <div class="day-schedule" id="miercoles">
                 <div class="time-slot">
-                    <span class="time">9:30 AM</span>
+                    <span class="time">8:00 AM</span>
                     <span class="class-name">Hatha Yoga</span>
                 </div>
                 <div class="time-slot">
+                    <span class="time">9:00 AM</span>
+                    <span class="class-name">Vinyasa Flow</span>
+                </div>
+                <div class="time-slot">
                     <span class="time">6:00 PM</span>
+                    <span class="class-name">Vinyasa Flow</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">7:00 PM</span>
                     <span class="class-name">Vinyasa Flow</span>
                 </div>
             </div>
             
             <div class="day-schedule" id="jueves">
                 <div class="time-slot">
-                    <span class="time">11:00 AM</span>
+                    <span class="time">8:00 AM</span>
+                    <span class="class-name">Hatha Yoga</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">9:00 AM</span>
                     <span class="class-name">Vinyasa Flow</span>
                 </div>
                 <div class="time-slot">
                     <span class="time">6:00 PM</span>
-                    <span class="class-name">Hatha Yoga</span>
+                    <span class="class-name">Vinyasa Flow</span>
                 </div>
                 <div class="time-slot">
-                    <span class="time">7:30 PM</span>
-                    <span class="class-name">Vinyasa Flow</span>
+                    <span class="time">7:00 PM</span>
+                    <span class="class-name">Yin Yoga</span>
                 </div>
             </div>
             
             <div class="day-schedule" id="viernes">
                 <div class="time-slot">
-                    <span class="time">9:30 AM</span>
-                    <span class="class-name">Yin Yoga</span>
+                    <span class="time">8:00 AM</span>
+                    <span class="class-name">Hatha Yoga</span>
                 </div>
                 <div class="time-slot">
-                    <span class="time">5:30 PM</span>
+                    <span class="time">9:00 AM</span>
                     <span class="class-name">Yin Yoga</span>
                 </div>
+
             </div>
             
             <div class="day-schedule" id="sabado">
                 <div class="time-slot">
                     <span class="time">8:00 AM</span>
-                    <span class="class-name">Vinyasa Flow</span>
-                </div>
-                <div class="time-slot">
-                    <span class="time">9:30 AM</span>
                     <span class="class-name">Hatha Yoga</span>
                 </div>
+                <div class="time-slot">
+                    <span class="time">9:00 AM</span>
+                    <span class="class-name">Yin Yoga</span>
+                </div>
+                <div class="time-slot">
+                    <span class="time">10:00 PM</span>
+                    <span class="class-name">Vinyasa Flow</span>
+                </div>
+
             </div>
             
-
             
         </div>
         
         <div class="schedule-cta">
             <p style="margin-bottom: 0rem !important;"><i>            Por clases particulares y otras consultas, <a href="#contact" class="inquiry-link">escribinos</a></i></p>
             <div class="btn-container">
-                <a href="#contact" class="btn">Asociate</a>
-                <a href="#" class="btn" id="view-full-schedule">Horario Completo</a>
+                <a href="#contact" class="btn">COMENZÁ HOY</a>
+                <a href="#" class="btn" id="view-full-schedule">HORARIO</a>
             </div>        
             </div>
     </div>
+
+
+
+    
 </section>
 
 <!-- Full Schedule Popup (with image) -->
@@ -2050,10 +2410,10 @@ body.animations-ready {
         <span class="close-popup">&times;</span>
         <h3></h3><br>
         <div class="schedule-image">
-            <img src="schedule.png" alt="Horario Completo de Clases" style="width: 100%;">
+            <img src="schedule.png" alt="HORARIO de Clases" style="width: 100%;">
         </div>
         <div class="popup-actions">
-            <a href="#contact" class="btn">Asociate</a>
+            <a href="#contact" class="btn">COMENZÁ HOY</a>
         </div>
     </div>
 </div>
@@ -2144,6 +2504,8 @@ body.animations-ready {
         </div>
     </section>
 
+
+
     <!-- Testimonials Section -->
     <section class="testimonial-section">
         <div class="container">
@@ -2197,12 +2559,133 @@ body.animations-ready {
         </div>
     </section>
 
+
+    <!-- Director Section -->
+    <section id="directora" class="directora">
+        <div class="container"><br>
+            <div class="section-title">
+                <h2>DIRECTORA</h2>
+            </div>
+            
+            <div class="directora-container">
+                <!-- Photo section -->
+                <div class="directora-photo">
+                    <img src="yo.jpg" alt="Directora de Uṣṇa Yoga">
+                </div>
+                
+                <!-- Content section -->
+                <div class="directora-content">
+                    <div class="directora-name">
+                        <h3>María Micaela Ninni</h3>
+                        <div class="acreditacion">Docente de Yoga Vinyasa</div>
+                    </div>
+                    
+                    
+                    <div class="credentials">
+                        <div class="credential-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>YTT200 Yoga Vinyasa <i>Yoga Renew, NJ, USA</i></span>
+                        </div>
+                        <div class="credential-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Posgrado en Historia & Filosofía de Yoga <i>Yogic Studies, Online, USA</i></span>
+                        </div>
+                                                <div class="credential-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Practicante de Ashtanga Yoga Vinyasa <i>2019 - presente</i></span>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+        
+                        <p>Mi viaje con el yoga comenzó hace ocho años. 
+                            Lo que empezó como una práctica personal se convirtió en un camino de vida que me llevó a formarme 
+                            con numerosos maestros alrededor del mundo y a profundizar en el arte de enseñar.</p>
+
+                        <p>Soy instructora certificada en Vinyasa y Yin Yoga. 
+                            Mi práctica se nutre de la disciplina del Ashtanga 
+                            y se sustenta en un estudio continuo de las diferentes ramas del yoga,
+                            incluyendo la filosofía yóguica, la anatomía, pranayama.</p> 
+
+                        <p>Desde el mayor amor y respeto por esta disciplina, abro las puertas de Uṣṇa en 2025. 
+                            Un espacio creado para compartir, crecer y construir comunidad a través de una práctica de 
+                            yoga consciente, con una base sólida tradicional pero integrada con los principios contemporáneos.</p>
+                        
+                        <p style="color: var(--primary);"><b>Gracias por estar aca.</b></p>
+                    
+
+                </div>
+            </div>
+            
+            <!-- Toggle Section for Essays -->
+
+            
+
+            <div class="toggle-section">
+                <h2 style="color: var(--primary); font-weight: 800; ">Ensayos sobre Yoga & Filosofía</h2>
+                <div class="toggle-container" id="toggle-usna">
+                    <div class="toggle-header">
+                        <h3>El Significado de Uṣṇa</h3>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="toggle-content">
+                        <div class="toggle-content-inner">
+                            <p>La palabra sánscrita <strong>uṣṇa</strong> (उष्ण) significa "calor" o "caliente", derivada de la raíz verbal <strong>√tap</strong> (तप्) que significa "calentar", "arder" o "brillar".</p>
+                            
+                            <p>En el contexto del yoga, uṣṇa representa el <strong>calor interno</strong> que generamos mediante la práctica constante—ese fuego transformador que purifica cuerpo y mente, disuelve tensiones y permite una conexión más profunda con nuestro ser esencial.</p>
+                            
+                            <p>Este concepto está íntimamente relacionado con <strong>tapas</strong>, la disciplina ardiente que cultivamos en el camino yóguico, donde el calor físico se convierte en metáfora del esfuerzo dedicado que nos transforma desde adentro.</p>
+                            
+                            <p>En la práctica de āsana, el uṣṇa se manifiesta como el calor corporal que experimentamos durante una sesión intensa. Este calor no es meramente físico; es también una energía purificadora que quema impurezas tanto a nivel corporal como mental.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="toggle-container" id="toggle-vinyasa">
+                    <div class="toggle-header">
+                        <h3>Vinyasa Krama</h3>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="toggle-content">
+                        <div class="toggle-content-inner">
+                            <p>El término <strong>Vinyasa Krama</strong> se compone de dos conceptos sánscritos: "vinyasa" que significa "colocar de una manera específica" y "krama" que se traduce como "etapa" o "proceso". Juntos, describen el arte de secuenciar prácticas de yoga de manera inteligente y progresiva.</p>
+                            
+                            <p>Este principio sugiere que cada postura debe prepararnos para la siguiente, creando un flujo natural donde cada movimiento tiene un propósito específico. No se trata simplemente de encadenar posturas, sino de crear una narrativa corporal que conduzca al practicante hacia un estado meditativo en movimiento.</p>
+                            
+                            <p>El Vinyasa Krama honra la individualidad del practicante, reconociendo que cada cuerpo tiene necesidades y capacidades únicas. Un maestro experimentado adapta la secuencia considerando factores como la hora del día, la estación del año, la edad del estudiante y su condición física particular.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="toggle-container" id="toggle-principios">
+                    <div class="toggle-header">
+                        <h3>Principios del Yoga Moderno</h3>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="toggle-content">
+                        <div class="toggle-content-inner">
+                            <p>El yoga contemporáneo ha evolucionado para integrar la sabiduría ancestral con los entendimientos modernos de la anatomía humana, la psicología y la neurociencia. Esta fusión crea una práctica que es a la vez tradicionalmente enraizada y relevantemente moderna.</p>
+                            
+                            <p>Uno de los principios fundamentales es la <strong>escucha corporal</strong>: aprender a distinguir entre el dolor que indica lesión y la incomodidad que señala crecimiento. Este discernimiento es crucial para una práctica sostenible que honre los límites del cuerpo mientras expande gradualmente sus capacidades.</p>
+                            
+                            <p>Otro principio esencial es la <strong>integración mente-cuerpo</strong>. Lejos de ser simplemente ejercicio físico, el yoga moderno enfatiza la conciencia plena, la conexión con la respiración y la cualidad meditativa del movimiento. Cada postura se convierte en una oportunidad para cultivar presencia y autoconocimiento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+
     <!-- Asociate Section -->
     <section class="asociate">
         <div class="container">
             <div class="asociate-content">
                 <h2 class="asociate-title">¡UNITE A NUESTRA COMUNIDAD!</h2>
-                <a href="#contact" class="asociate-link">ASOCIATE</a>
+                <a href="#contact" class="asociate-link">COMENZÁ HOY</a>
             </div>
         </div>
     </section>
@@ -2213,11 +2696,12 @@ body.animations-ready {
         <div class="footer-container">
             <div class="footer-about">
                 <div class="footer-logo">
-                    <img src="logo_footer.png" alt="Uṣṇa logo">
+                    <img src="logo_footer.png" alt="Uṣṇa logo"><BR>
+                    
                 </div>
                 <p class="footer-community">
                    <a href="#contact">ENCONTRÁ TU PRÁCTICA<br>
-                    ASOCIATE A NUESTRA COMUNIDAD</a>
+                    COMENZÁ HOY A NUESTRA COMUNIDAD</a>
                 </p>
                 
                 <div class="footer-social">
@@ -2228,7 +2712,7 @@ body.animations-ready {
             </div>
             
             <div class="footer-location">
-                <h4>ESTUDIO DE YOGA</h4>
+                
                 <div class="location-info">
                     <p id="footer-ubicacion-text" style="font-family: 'Megante', sans-serif; text-transform: uppercase;">
                         Edificio Panamericana 50<br> Pilar, Provincia de Buenos Aires<br> Argentina <i class="fas fa-heart"></i>
@@ -2244,195 +2728,311 @@ body.animations-ready {
 <p>&copy; 2025 | hecho con <a href="https://instagram.com/yourprofile" target="_blank"><i class="fas fa-heart" style="color: white;"></i></a></p>        </div>
     </footer>
 
-    <script>
 
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navMenu = document.querySelector('.nav-menu');
+
+
+
+    <script>
+// Director section animations - Fixed
+function initDirectorAnimations() {
+    console.log("Initializing director animations...");
+    const directorContainer = document.querySelector('.directora-container');
+    const directorContent = document.querySelector('.directora-content');
+    const credentialItems = document.querySelectorAll('.credential-item');
+    const directorPhoto = document.querySelector('.directora-photo img');
+    const toggleSection = document.querySelector('.toggle-section');
+    const toggleContainers = document.querySelectorAll('.toggle-container');
     
-    mobileMenuBtn.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        mobileMenuBtn.innerHTML = navMenu.classList.contains('active') ? 
-            '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    console.log("Elements found:", {
+        directorContainer,
+        directorContent,
+        credentialItems: credentialItems.length,
+        directorPhoto,
+        toggleSection,
+        toggleContainers: toggleContainers.length
     });
     
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+    const options = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                console.log("Element intersecting:", entry.target);
+                
+                if (entry.target === directorContainer) {
+                    entry.target.classList.add('visible');
+                    // Animate content with a slight delay
+                    setTimeout(() => {
+                        if (directorContent) directorContent.classList.add('visible');
+                    }, 300);
+                }
+                
+                if (entry.target.classList.contains('credential-item')) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, 100);
+                }
+                
+                if (entry.target === toggleSection) {
+                    entry.target.classList.add('visible');
+                }
+                
+                if (entry.target.classList.contains('toggle-container')) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, 150);
+                }
+            }
         });
+    }, options);
+    
+    // Observe director container
+    if (directorContainer) {
+        console.log("Observing director container");
+        observer.observe(directorContainer);
+    }
+    
+    // Observe credential items
+    credentialItems.forEach(item => {
+        console.log("Observing credential item");
+        observer.observe(item);
     });
     
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
+    // Observe toggle section and containers
+    if (toggleSection) {
+        console.log("Observing toggle section");
+        observer.observe(toggleSection);
+    }
+    
+    toggleContainers.forEach(container => {
+        console.log("Observing toggle container");
+        observer.observe(container);
+    });
+    
+    // Photo hover effect enhancement
+    if (directorPhoto) {
+        directorPhoto.addEventListener('mouseenter', () => {
+            directorPhoto.style.transform = 'scale(1.02)';
+            directorPhoto.style.filter = 'grayscale(0%)';
+        });
+        
+        directorPhoto.addEventListener('mouseleave', () => {
+            directorPhoto.style.transform = 'scale(1)';
+            directorPhoto.style.filter = 'grayscale(20%)';
+        });
+    }
+}
+
+// Enhanced toggle animations - Slower like testimonials
+function enhanceToggleAnimations() {
+    console.log("Enhancing toggle animations...");
+    const toggleContainers = document.querySelectorAll('.toggle-container');
+    
+    toggleContainers.forEach(container => {
+        const header = container.querySelector('.toggle-header');
+        const content = container.querySelector('.toggle-content');
+        const icon = container.querySelector('.toggle-icon');
+        
+        // Remove any existing click event listeners
+        const newHeader = header.cloneNode(true);
+        header.parentNode.replaceChild(newHeader, header);
+        
+        // Add new click event listener
+        newHeader.addEventListener('click', () => {
+            // Close all other toggles with animation
+            toggleContainers.forEach(otherContainer => {
+                if (otherContainer !== container && otherContainer.classList.contains('active')) {
+                    otherContainer.classList.remove('active');
+                    const otherContent = otherContainer.querySelector('.toggle-content');
+                    const otherIcon = otherContainer.querySelector('.toggle-icon');
+                    if (otherContent) {
+                        otherContent.style.opacity = '0';
+                        otherContent.style.maxHeight = '0';
+                    }
+                    if (otherIcon) {
+                        otherIcon.style.transform = 'rotate(0deg)';
+                    }
+                }
+            });
             
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
+            // Toggle current container
+            const isActive = container.classList.contains('active');
+            container.classList.toggle('active');
             
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
+            // Animate content with slower transition
+            if (content) {
+                if (!isActive) {
+                    // Opening
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    setTimeout(() => {
+                        content.style.opacity = '1';
+                    }, 100);
+                    if (icon) {
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                } else {
+                    // Closing
+                    content.style.opacity = '0';
+                    content.style.maxHeight = '0';
+                    if (icon) {
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                }
             }
         });
     });
+}
 
-    // Navbar appear on scroll
-    const header = document.querySelector('header');
-    let lastScrollY = window.scrollY;
-    
-    // Initially hide the header
-    header.classList.add('header-hidden');
-    
-    window.addEventListener('scroll', () => {
-        // Show navbar when scrolling down (after 50px), hide when at top
-        if (window.scrollY > 50) {
-            header.classList.remove('header-hidden');
-        } else {
-            header.classList.add('header-hidden');
-        }
-        
-        lastScrollY = window.scrollY;
+// Mobile Menu Toggle
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navMenu = document.querySelector('.nav-menu');
+
+mobileMenuBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    mobileMenuBtn.innerHTML = navMenu.classList.contains('active') ? 
+        '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
     });
+});
 
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
 
-    // Mobile schedule day toggle
+// Navbar appear on scroll
+const header = document.querySelector('header');
+let lastScrollY = window.scrollY;
+
+// Initially hide the header
+header.classList.add('header-hidden');
+
+window.addEventListener('scroll', () => {
+    // Show navbar when scrolling down (after 50px), hide when at top
+    if (window.scrollY > 50) {
+        header.classList.remove('header-hidden');
+    } else {
+        header.classList.add('header-hidden');
+    }
+    
+    lastScrollY = window.scrollY;
+});
+
+// Mobile schedule day toggle
+document.querySelectorAll('.day-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active class from all buttons and schedules
+        document.querySelectorAll('.day-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.day-schedule').forEach(schedule => schedule.classList.remove('active'));
+        
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        // Show corresponding schedule
+        const day = button.getAttribute('data-day');
+        document.getElementById(day).classList.add('active');
+    });
+});
+
+// Set today's day as active for schedule
+document.addEventListener('DOMContentLoaded', function() {
+    const days = ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
+    const today = new Date().getDay(); // 0 = Sunday, 1 = Monday, etc.
+    
+    // If Sunday, show Monday instead
+    const dayToShow = today === 0 ? 1 : today;
+    const dayId = days[dayToShow];
+    
+    // Activate the corresponding button and schedule
+    const dayButton = document.querySelector(`.day-btn[data-day="${dayId}"]`);
+    if (dayButton) {
+        dayButton.classList.add('active');
+        document.getElementById(dayId).classList.add('active');
+    }
+    
+    // Add click events to day buttons
     document.querySelectorAll('.day-btn').forEach(button => {
         button.addEventListener('click', () => {
-            // Remove active class from all buttons and schedules
             document.querySelectorAll('.day-btn').forEach(btn => btn.classList.remove('active'));
             document.querySelectorAll('.day-schedule').forEach(schedule => schedule.classList.remove('active'));
             
-            // Add active class to clicked button
             button.classList.add('active');
-            
-            // Show corresponding schedule
             const day = button.getAttribute('data-day');
             document.getElementById(day).classList.add('active');
         });
     });
+    
+    // Popup functionality
+    const popup = document.getElementById('schedule-popup');
+    const viewButton = document.getElementById('view-full-schedule');
+    const closeButton = document.querySelector('.close-popup');
+    const closePopupBtn = document.querySelector('.close-popup-btn');
 
-
-    // Set today's day as active for schedule
-    document.addEventListener('DOMContentLoaded', function() {
-        const days = ['domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
-        const today = new Date().getDay(); // 0 = Sunday, 1 = Monday, etc.
-        
-        // If Sunday, show Monday instead
-        const dayToShow = today === 0 ? 1 : today;
-        const dayId = days[dayToShow];
-        
-        // Activate the corresponding button and schedule
-        const dayButton = document.querySelector(`.day-btn[data-day="${dayId}"]`);
-        if (dayButton) {
-            dayButton.classList.add('active');
-            document.getElementById(dayId).classList.add('active');
-        }
-        
-        // Add click events to day buttons
-        document.querySelectorAll('.day-btn').forEach(button => {
-            button.addEventListener('click', () => {
-                document.querySelectorAll('.day-btn').forEach(btn => btn.classList.remove('active'));
-                document.querySelectorAll('.day-schedule').forEach(schedule => schedule.classList.remove('active'));
-                
-                button.classList.add('active');
-                const day = button.getAttribute('data-day');
-                document.getElementById(day).classList.add('active');
-            });
-        });
-        
-// Popup functionality
-const popup = document.getElementById('schedule-popup');
-const viewButton = document.getElementById('view-full-schedule');
-const closeButton = document.querySelector('.close-popup');
-const closePopupBtn = document.querySelector('.close-popup-btn');
-
-if (viewButton && popup) {
-    viewButton.addEventListener('click', () => {
-        popup.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    });
-}
-
-// Close popup function
-function closePopup() {
-    popup.classList.remove('active');
-    document.body.style.overflow = 'auto';
-}
-
-// Add event listeners for closing
-if (closeButton) {
-    closeButton.addEventListener('click', closePopup);
-}
-
-if (closePopupBtn) {
-    closePopupBtn.addEventListener('click', closePopup);
-}
-
-// Close popup when clicking outside
-if (popup) {
-    popup.addEventListener('click', (e) => {
-        if (e.target === popup) {
-            closePopup();
-        }
-    });
-}
-
-// Footer schedule link
-const footerLink = document.getElementById('footer-schedule-link');
-if (footerLink) {
-    footerLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        if (popup) {
+    if (viewButton && popup) {
+        viewButton.addEventListener('click', () => {
             popup.classList.add('active');
             document.body.style.overflow = 'hidden';
-        }
-    });
-}
-    });
+        });
+    }
 
-// Popup functionality
-const popup = document.getElementById('schedule-popup');
-const viewButton = document.getElementById('view-full-schedule');
-const closeButton = document.querySelector('.close-popup');
-const closePopupBtn = document.querySelector('.close-popup-btn');
+    // Close popup function
+    function closePopup() {
+        popup.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
 
-if (viewButton && popup) {
-    viewButton.addEventListener('click', () => {
-        popup.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    });
-}
+    // Add event listeners for closing
+    if (closeButton) {
+        closeButton.addEventListener('click', closePopup);
+    }
 
-// Close popup function
-function closePopup() {
-    popup.classList.remove('active');
-    document.body.style.overflow = 'auto';
-}
+    if (closePopupBtn) {
+        closePopupBtn.addEventListener('click', closePopup);
+    }
 
-// Add event listeners for closing
-if (closeButton) {
-    closeButton.addEventListener('click', closePopup);
-}
+    // Close popup when clicking outside
+    if (popup) {
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                closePopup();
+            }
+        });
+    }
 
-if (closePopupBtn) {
-    closePopupBtn.addEventListener('click', closePopup);
-}
-
-// Close popup when clicking outside
-if (popup) {
-    popup.addEventListener('click', (e) => {
-        if (e.target === popup) {
-            closePopup();
-        }
-    });
-}
-
+    // Footer schedule link
+    const footerLink = document.getElementById('footer-schedule-link');
+    if (footerLink) {
+        footerLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (popup) {
+                popup.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    }
+});
 
 // Intersection Observer for scroll animations
 function initScrollAnimations() {
@@ -2494,8 +3094,13 @@ function animateHero() {
 
 // Initialize all animations when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOM fully loaded, initializing animations...");
     initScrollAnimations();
     animateHero();
+    
+    // Add these new initializations
+    initDirectorAnimations();
+    enhanceToggleAnimations();
     
     // Add a small delay to ensure styles are applied before animations start
     setTimeout(() => {
@@ -2531,7 +3136,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 function manageInteraction() {
-    const elementsToBlock = document.querySelectorAll('.blockable-element'); // Replace with your desired selector
+    const elementsToBlock = document.querySelectorAll('.blockable-element');
     if (window.innerWidth <= 700) {
         elementsToBlock.forEach(el => {
             el.classList.add('non-interactive');
@@ -2546,6 +3151,7 @@ function manageInteraction() {
 // Run on page load and window resize
 window.addEventListener('load', manageInteraction);
 window.addEventListener('resize', manageInteraction);
-    </script>
+
+</script>
 </body>
 </html>
