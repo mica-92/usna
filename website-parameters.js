@@ -1,6 +1,6 @@
 // website-parameters.js
 const websiteParameters = {
-    ubicacion: "Edificio Panamericana 50, Pilar, Provincia de Buenos Aires, Argentina",
+    ubicacion: "Edificio 10, Pilar, Provincia de Buenos Aires, Argentina",
     telefono: "(011) 4245-7890",
     email: "info@usna.com.ar",
     horarios: {
@@ -8,4 +8,5 @@ const websiteParameters = {
         sabados: "Sábados: 9:00 - 18:00",
         domingos: "Domingos: Cerrado"
     },
+
 };
