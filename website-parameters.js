@@ -1,6 +1,6 @@
 // website-parameters.js
 const websiteParameters = {
-    ubicacion: "Edificio 10, Pilar, Provincia de Buenos Aires, Argentina",
+    ubicacion: "Edificio 10,Provincia de Buenos Aires, Argentina",
     telefono: "(011) 4245-7890",
     email: "info@usna.com.ar",
     horarios: {
@@ -10,3 +10,4 @@ const websiteParameters = {
     },
 
 };
+
